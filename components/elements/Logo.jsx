@@ -6,7 +6,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import IconButton from "./IconButton";
 import { IoCloseOutline } from "react-icons/io5";
 
-const Logo = ({isInDrawer = false, onClickClose = () => {}}) => {
+const Logo = ({isInDrawer = false, onClickClose = () => {} }) => {
   const { push } = useRouter();
 
   const onClickLogo = () => {

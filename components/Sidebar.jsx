@@ -3,9 +3,10 @@ import React from 'react'
 import Logo from "./elements/Logo";
 import Navigator from "./elements/Navigator";
 import { cn } from '@/lib/utils';
+import usePlayerState from '@/hooks/usePlayerState'
 
 const Sidebar = ({children}) => {
-  const {isVisiblePlayer} = usePlayerState();
+  const { isVisibleState } = usePlayerState;
   return (
     <div
       className={cn(
