@@ -6,7 +6,18 @@ import { homeCategoryList } from '@/lib/dummyData';
 import { cn } from '@/lib/utils';
 
 const Category = () => {
-  const { homeCategory, setHomeCategory, setHeagerImageSrc} = useUIState();
+  const { homeCategory, setHomeCategory, setHeaderImageSrc} = useUIState();
+
+  const onClickCategory = (item) => {
+    if(homeCategory === item.label) {
+      setHeaderImageSrc("");
+      setHomeCategory("");
+    }else{
+      setHeaderImageSrc(item.src);
+      setHomeCategory(item.label);
+    }
+  }
+
   return (
     <ul className="max-w-full overflow-x-auto flex flex-row gap-4">
       {homeCategoryList.map((item) => {
